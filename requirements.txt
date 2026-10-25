@@ -1,0 +1,9 @@
+llama-index-core>=0.12
+llama-index-vector-stores-mongodb
+llama-index-embeddings-huggingface
+llama-index-llms-openai
+pymongo>=4.7
+pypdf
+pandas
+ragas>=0.2,<0.3
+langchain-openai
