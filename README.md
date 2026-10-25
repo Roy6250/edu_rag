@@ -12,10 +12,13 @@ This code is a minimal implementation of the paper:
 > **Knowledge Retrieval-Based Intelligent Question and Answer Generation Framework for Education**
 > Anay Pardasani, Karen Maleski, Sayantan Roy — *Journal of Student Research*, Volume 14, Issue 1 (2025).
 
+📖 **Want the story behind the project?** Read [PROJECT_JOURNEY.md](PROJECT_JOURNEY.md). It covers the problem we started with, why we chose RAG, how the system was built and evaluated, the results, and how those findings became the paper.
+
 ---
 
 ## Table of contents
 
+- [Project journey (write-up)](PROJECT_JOURNEY.md)
 - [Architecture](#architecture)
 - [How it maps to the paper](#how-it-maps-to-the-paper)
 - [Project structure](#project-structure)
@@ -98,6 +101,7 @@ edu_rag/
 ├── rag.py            # EduRAG class: answer() and generate_questions()
 ├── evaluate.py       # RAGAS evaluation over a CSV of questions + ground truths
 ├── eval_set.csv      # tiny sample evaluation set
+├── PROJECT_JOURNEY.md # write-up: problem → why RAG → experiments → results → paper
 ├── data/             # put your PDFs here
 └── requirements.txt
 ```
@@ -331,7 +335,6 @@ Each chunk is stored as one document. LlamaIndex's `MongoDBAtlasVectorSearch` us
 ```json
 {
   "_id": "<node id>",
-  "id": "<node id>",
   "text": "chunk text ...",
   "embedding": [0.0123, -0.0456, "... 768 floats ..."],
   "metadata": {
